@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DapurTE - Rasa Istimewa untuk Momen Spesial</title>
+    <meta name="description"
+        content="Layanan catering premium untuk pernikahan, acara kantor, dan harian dengan cita rasa nusantara dan internasional.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Dapur<span>TE</span>.</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#services" class="nav-link">Layanan</a></li>
+                <li><a href="#contact" class="nav-link btn-contact">Pesan Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <span class="subtitle" data-aos="fade-up">Cita Rasa Tak Terlupakan</span>
+            <h1 data-aos="fade-up" data-aos-delay="100">Jadikan Momen Anda <br>Lebih Istimewa</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Menyajikan hidangan premium dengan bahan segar dan resep
+                autentik, dikemas dengan sentuhan elegan untuk setiap acara spesial Anda.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+                <a href="javascript:void(0)" onclick="openModal('consultModal')" class="btn btn-outline">Konsultasi
+                    Gratis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container about-grid">
+            <div class="about-image">
+                <div class="img-wrapper">
+                    <img src="WhatsApp Image 2026-01-06 at 12.29.51.jpeg" alt="Sayuran Segar Pilihan" class="about-img">
+                </div>
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">Mengapa Memilih Kami?</h2>
+                <p>Kami percaya bahwa makanan bukan sekadar rasa, tetapi juga pengalaman. Dengan pengalaman lebih dari
+                    10 tahun, DapurTE Catering berkomitmen menyajikan hidangan berkualitas tinggi, higienis, dan halal.
+                </p>
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                        <div>
+                            <h3>Bahan Segar</h3>
+                            <p>Dipetik langsung dari petani lokal terbaik.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h3>Chef Profesional</h3>
+                            <p>Diolah oleh tangan ahli berpengalaman.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h3>Tepat Waktu</h3>
+                            <p>Layanan profesional dan pengiriman on-time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section id="menu" class="menu section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Pilihan Favorit</span>
+                <h2 class="section-title">Menu Andalan</h2>
+                <p>Rangkaian hidangan best-seller yang paling dicintai pelanggan kami.</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="images/tumpeng.jpeg" alt="Nasi Tumpeng Royal" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-top">
+                            <h3>Nasi Tumpeng Royal</h3>
+                            <span class="price">Mulai 1.5jt</span>
+                        </div>
+                        <p>Tumpeng kuning pulen dengan berbagai macam lauk pauk premium hiasan tradisional.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2" onclick="openModal('tumpengRodal')">Pilih
+                            Lauk</button>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="images/prasmanan.jpeg" alt="Prasmanan Wedding" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-top">
+                            <h3>Prasmanan Wedding</h3>
+                            <span class="price">Paket mulai 20jt</span>
+                        </div>
+                        <p>Paket pernikahan lengkap dengan pilihan menu istimewa.</p>
+                        <div class="d-flex" style="gap: 10px; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-outline-primary mt-2"
+                                onclick="openPrasmanan('impressive')">Pkt Impressive (20jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openPrasmanan('premium')">Pkt
+                                Premium (40jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openPrasmanan('deluxe')">Pkt
+                                Deluxe (60jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openPrasmanan('exclusive')">Pkt
+                                Exclusive (80jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openPrasmanan('vip')">Pkt VIP
+                                (100jt)</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="menu-card">
+                    <img src="images/bento.jpeg" alt="Lunch Box Corporate" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-top">
+                            <h3>Lunch Box Corporate</h3>
+                            <span class="price">35k / box</span>
+                        </div>
+                        <p>Solusi praktis dan lezat untuk meeting, seminar, atau acara kantor.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2" onclick="openModal('lunchBoxModal')">Lihat
+                            Menu</button>
+                    </div>
+                </div>
+                <!-- Menu Item 4 -->
+                <div class="menu-card">
+                    <img src="images/healthy-catering.png" alt="Healthy Catering 5 Days" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-top">
+                            <h3>Healthy Catering (Mon-Fri)</h3>
+                            <span class="price">60k / day</span>
+                        </div>
+                        <p>Menu sehat harian selama 5 hari (Senin-Jumat) dengan gizi seimbang dan variatif.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2" onclick="openModal('healthyModal')">Pilih
+                            Paket</button>
+                    </div>
+                </div>
+                <!-- Menu Item 5 -->
+                <div class="menu-card">
+                    <img src="images/syukuran-arisan.png" alt="Paket Syukuran & Arisan" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-top">
+                            <h3>Syukuran & Arisan</h3>
+                            <span class="price">paket mulai 3 jutaan aja</span>
+                        </div>
+                        <p>Paket prasmanan ekonomis untuk acara kebersamaan keluarga dan kerabat.</p>
+                        <div class="d-flex" style="gap: 10px; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openSyukuran('ekonomi')">Pkt
+                                Ekonomi (10jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openSyukuran('kenyambok')">Pkt
+                                Kenyambok (3jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openSyukuran('bsuhk')">Pkt
+                                BSUHK (5jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openSyukuran('gati')">Pkt BSUHK
+                                GATI (8jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2" onclick="openSyukuran('wareg')">Pkt
+                                WAREG (12jt)</button>
+                            <button class="btn btn-sm btn-outline-primary mt-2"
+                                onclick="openSyukuran('wareg_betul')">Pkt WAREG BETUL (16jt)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-secondary">Unduh Katalog Lengkap <i class="fa-solid fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Layanan Kami</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fa-solid fa-rings-wedding"></i>
+                    <h3>Pernikahan</h3>
+                    <p>Wujudkan resepsi impian dengan sajian istimewa.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Corporate Event</h3>
+                    <p>Coffee break, lunch box, dan prasmanan kantor.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Syukuran & Arisan</h3>
+                    <p>Paket hemat namun mewah untuk acara keluarga.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-carrot"></i>
+                    <h3>Healthy Catering</h3>
+                    <p>Pelayanan katering diet dan menu sehat harian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <h2>Siap Menghidangkan yang Terbaik?</h2>
+                    <p>Konsultasikan kebutuhan acara Anda bersama tim kami. Dapatkan penawaran spesial untuk pemesanan
+                        hari ini.</p>
+                    <div class="contact-info">
+                        <p><i class="fa-brands fa-whatsapp"></i> +62 819-3631-8696</p>
+                        <p><i class="fa-solid fa-envelope"></i> hello@dapurte.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Penedagandor, Kec. Labuhan Haji</p>
+                        <p><i class="fa-solid fa-clock"></i> Operasional: Senin - Sabtu</p>
+                    </div>
+                    <a href="javascript:void(0)" onclick="openModal('consultModal')"
+                        class="btn btn-primary btn-lg">Hubungi Kami via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid container">
+            <div class="footer-col">
+                <h3>DapurTE</h3>
+                <p>Menyajikan hidangan lezat dan berkualitas untuk setiap momen spesial Anda.</p>
+                <div style="margin-top: 15px; font-size: 0.9rem; color: #ccc;">
+                    <p style="margin-bottom: 5px;"><i class="fa-solid fa-location-dot" style="margin-right: 5px;"></i>
+                        Penedagandor, Kec. Labuhan Haji</p>
+                    <p><i class="fa-solid fa-clock" style="margin-right: 5px;"></i> Senin - Sabtu</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Link Cepat</h4>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sosial Media</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i> @DapurTEreal</a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i> @DapurTE1</a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i> @DapurTEvirall</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DapurTE Catering. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Healthy Catering Modal -->
+    <div id="healthyModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close-modal" onclick="closeModal('healthyModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Healthy Catering Subscription</h2>
+                <p>Paket langganan sehat harian (Senin - Jumat).</p>
+                <p style="font-size: 0.9rem; color: var(--accent);">Pilih hari pengantaran yang Anda inginkan.</p>
+            </div>
+            <form class="menu-selection-form">
+                <style>
+                    .day-selector {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin: 20px 0;
+                    }
+
+                    .day-checkbox {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                    }
+
+                    .day-checkbox:hover {
+                        background: #f9f9f9;
+                        border-color: var(--primary);
+                    }
+
+                    .day-checkbox input {
+                        margin-right: 15px;
+                        width: 20px;
+                        height: 20px;
+                        accent-color: var(--primary);
+                    }
+
+                    .day-checkbox span {
+                        font-weight: 500;
+                        flex-grow: 1;
+                    }
+
+                    .day-price {
+                        color: var(--primary);
+                        font-weight: bold;
+                    }
+                </style>
+                <div class="day-selector">
+                    <label class="day-checkbox">
+                        <input type="checkbox" name="healthyDays" value="Senin">
+                        <span>Senin</span>
+                        <span class="day-price">60k</span>
+                    </label>
+                    <label class="day-checkbox">
+                        <input type="checkbox" name="healthyDays" value="Selasa">
+                        <span>Selasa</span>
+                        <span class="day-price">60k</span>
+                    </label>
+                    <label class="day-checkbox">
+                        <input type="checkbox" name="healthyDays" value="Rabu">
+                        <span>Rabu</span>
+                        <span class="day-price">60k</span>
+                    </label>
+                    <label class="day-checkbox">
+                        <input type="checkbox" name="healthyDays" value="Kamis">
+                        <span>Kamis</span>
+                        <span class="day-price">60k</span>
+                    </label>
+                    <label class="day-checkbox">
+                        <input type="checkbox" name="healthyDays" value="Jumat">
+                        <span>Jumat</span>
+                        <span class="day-price">60k</span>
+                    </label>
+                </div>
+
+                <div class="summary-box"
+                    style="background: #fdf5e6; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
+                    <p style="margin: 0;">Total Hari: <strong id="healthyTotalDays">0</strong></p>
+                    <p style="margin: 5px 0 0; font-size: 1.1rem; color: var(--primary);">Estimasi: <strong
+                            id="healthyEstPrice">Rp 0</strong></p>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block" onclick="proceedToReservation('healthy')">Lanjut
+                    ke Pemesanan</button>
+            </form>
+        </div>
+    </div>
+    <!-- Syukuran Modal -->
+    <div id="syukuranModal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close-modal" onclick="closeModal('syukuranModal')">&times;</span>
+            <div class="modal-header">
+                <h2 id="syukuranTitle">Paket Kenyambok (Syukuran & Arisan)</h2>
+                <p id="syukuranSubtitle">Nikmati hidangan spesial 3juta untuk 75 porsi.</p>
+                <p style="font-size: 0.9rem; color: var(--accent);">Pilih <span id="syukuranLimitDisplay">4</span> menu
+                    dari setiap kategori.</p>
+            </div>
+            <form class="menu-selection-form">
+                <div class="menu-category" id="syukuranAppetizerCategory">
+                    <h3 style="color: var(--primary); margin: 15px 0 10px; display: inline-block;">Appetizer (Hidangan
+                        Pembuka)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_syukuran_appetizer">0</span>/<span class="limit-val">4</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Bruschetta Pomodoro"> Bruschetta
+                            Pomodoro</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Lumpia Semarang"> Lumpia
+                            Semarang</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Caesar Salad"> Caesar
+                            Salad</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Calamari Rings"> Calamari
+                            Rings</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Gyoza"> Gyoza</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Prawn Cocktail"> Prawn
+                            Cocktail</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Zuppa Soup"> Zuppa Soup</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Bitterballen">
+                            Bitterballen</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Vietnamese Spring Rolls">
+                            Vietnamese Spring Rolls</label>
+                        <label><input type="checkbox" name="syukuran_appetizer" value="Stuffed Mushrooms"> Stuffed
+                            Mushrooms</label>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 style="color: var(--primary); margin: 15px 0 10px; display: inline-block;">Main Course (Hidangan
+                        Utama)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_syukuran_main">0</span>/<span class="limit-val">4</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="syukuran_main" value="Grilled Rib-Eye Steak"> Grilled
+                            Rib-Eye Steak</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Nasi Goreng Wagyu"> Nasi Goreng
+                            Wagyu</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Chicken Cordon Bleu"> Chicken Cordon
+                            Bleu</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Salmon Teriyaki"> Salmon
+                            Teriyaki</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Fettuccine Carbonara"> Fettuccine
+                            Carbonara</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Bebek Betutu"> Bebek Betutu</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Beef Bourguignon"> Beef
+                            Bourguignon</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Pad Thai"> Pad Thai</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Lamb Chops"> Lamb Chops</label>
+                        <label><input type="checkbox" name="syukuran_main" value="Lasagna Alla Bolognese"> Lasagna Alla
+                            Bolognese</label>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 style="color: var(--primary); margin: 25px 0 10px; display: inline-block;">Dessert (Hidangan
+                        Penutup)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_syukuran_dessert">0</span>/<span class="limit-val">4</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="syukuran_dessert" value="Tiramisu"> Tiramisu</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Crème Brûlée"> Crème Brûlée</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Molten Chocolate Lava Cake"> Molten
+                            Chocolate Lava Cake</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Mango Sticky Rice"> Mango Sticky
+                            Rice</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Es Cendol Durian"> Es Cendol
+                            Durian</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="New York Cheesecake"> New York
+                            Cheesecake</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Apple Pie"> Apple Pie</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Panna Cotta"> Panna Cotta</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Churros"> Churros</label>
+                        <label><input type="checkbox" name="syukuran_dessert" value="Macarons"> Macarons</label>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 style="color: var(--primary); margin: 25px 0 10px; display: inline-block;">Beverages (Minuman)
+                    </h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_syukuran_beverages">0</span>/<span class="limit-val">4</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="syukuran_beverages" value="Iced Peach Tea"> Iced Peach
+                            Tea</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Classic Mojito"> Classic
+                            Mojito</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Es Kopi Susu Gula Aren"> Es Kopi
+                            Susu Gula Aren</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Mango Smoothie"> Mango
+                            Smoothie</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Lemon Mint Squash"> Lemon Mint
+                            Squash</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Blue Lagoon Mocktail"> Blue
+                            Lagoon Mocktail</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Avocado Juice"> Avocado
+                            Juice</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Hot Matcha Latte"> Hot Matcha
+                            Latte</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Strawberry Milkshake"> Strawberry
+                            Milkshake</label>
+                        <label><input type="checkbox" name="syukuran_beverages" value="Thai Iced Tea"> Thai Iced
+                            Tea</label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block mt-3"
+                    onclick="proceedToReservation('syukuran')"><i class="fa-solid fa-floppy-disk"></i> Simpan Menu &
+                    Lanjut ke Pemesanan</button>
+            </form>
+        </div>
+    </div>
+    <!-- Lunch Box Modal -->
+    <div id="lunchBoxModal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close-modal" onclick="closeModal('lunchBoxModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Menu Lunch Box Corporate</h2>
+                <p>Pilihan praktis dengan cita rasa istimewa.</p>
+                <p style="font-size: 0.9rem; color: var(--accent);">Masukkan jumlah box untuk setiap menu yang
+                    diinginkan.</p>
+            </div>
+            <form class="menu-selection-form">
+                <style>
+                    .menu-item-row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 0;
+                        border-bottom: 1px solid #eee;
+                    }
+
+                    .menu-item-row:last-child {
+                        border-bottom: none;
+                    }
+
+                    .qty-input {
+                        width: 70px;
+                        padding: 5px;
+                        text-align: center;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                    }
+                </style>
+                <div class="menu-category">
+                    <h3
+                        style="color: var(--primary); margin: 15px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+                        Kategori Tradisional (Indonesian Signature)</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-row">
+                            <span>Nasi Begana Spesial</span>
+                            <input type="number" class="qty-input" data-name="Nasi Begana Spesial" min="0" value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Nasi Kuning Nusantara</span>
+                            <input type="number" class="qty-input" data-name="Nasi Kuning Nusantara" min="0" value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Nasi Timbel Parahyangan</span>
+                            <input type="number" class="qty-input" data-name="Nasi Timbel Parahyangan" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Nasi Liwet Sunda Premium</span>
+                            <input type="number" class="qty-input" data-name="Nasi Liwet Sunda Premium" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Nasi Bali Sanur</span>
+                            <input type="number" class="qty-input" data-name="Nasi Bali Sanur" min="0" value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Nasi Gudeg Jogja Istimewa</span>
+                            <input type="number" class="qty-input" data-name="Nasi Gudeg Jogja Istimewa" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Nasi Padang Executive Box</span>
+                            <input type="number" class="qty-input" data-name="Nasi Padang Executive Box" min="0"
+                                value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3
+                        style="color: var(--primary); margin: 25px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+                        Kategori Modern & Internasional (International Choice)</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-row">
+                            <span>Beef Teriyaki Bento</span>
+                            <input type="number" class="qty-input" data-name="Beef Teriyaki Bento" min="0" value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Chicken Katsu Curry Box</span>
+                            <input type="number" class="qty-input" data-name="Chicken Katsu Curry Box" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Grilled Salmon Steak Lunch</span>
+                            <input type="number" class="qty-input" data-name="Grilled Salmon Steak Lunch" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Roasted Chicken Rosemary</span>
+                            <input type="number" class="qty-input" data-name="Roasted Chicken Rosemary" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Beef Black Pepper Oriental</span>
+                            <input type="number" class="qty-input" data-name="Beef Black Pepper Oriental" min="0"
+                                value="0">
+                        </div>
+                        <div class="menu-item-row">
+                            <span>Korean Bulgogi Bowl</span>
+                            <input type="number" class="qty-input" data-name="Korean Bulgogi Bowl" min="0" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block mt-3"
+                    onclick="proceedToReservation('lunchbox')"><i class="fa-solid fa-floppy-disk"></i> Simpan Menu &
+                    Lanjut ke Pemesanan</button>
+            </form>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <!-- Prasmanan Menu Modal -->
+    <div id="prasmananModal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close-modal" onclick="closeModal('prasmananModal')">&times;</span>
+            <div class="modal-header">
+                <h2 id="prasmananTitle">Menu Prasmanan Wedding</h2>
+                <p id="prasmananSubtitle">Pilihan hidangan istimewa untuk momen spesial Anda.</p>
+                <p style="font-size: 0.9rem; color: var(--accent);">Pilih maksimal <span
+                        id="prasmananLimitDisplay">5</span> item dari setiap kategori.</p>
+            </div>
+            <form class="menu-selection-form">
+                <div class="menu-category" id="prasAppetizerCategory">
+                    <h3
+                        style="color: var(--primary); margin: 15px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+                        Appetizer (Hidangan Pembuka)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_prasmanan_appetizer">0</span>/<span class="pras-limit-val">5</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Bruschetta Pomodoro"> Bruschetta
+                            Pomodoro</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Lumpia Semarang"> Lumpia
+                            Semarang</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Caesar Salad"> Caesar
+                            Salad</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Calamari Rings"> Calamari
+                            Rings</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Gyoza"> Gyoza</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Prawn Cocktail"> Prawn
+                            Cocktail</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Zuppa Soup"> Zuppa Soup</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Bitterballen">
+                            Bitterballen</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Vietnamese Spring Rolls">
+                            Vietnamese Spring Rolls</label>
+                        <label><input type="checkbox" name="prasmanan_appetizer" value="Stuffed Mushrooms"> Stuffed
+                            Mushrooms</label>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="prasMainCategory">
+                    <h3
+                        style="color: var(--primary); margin: 15px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+                        Main Course (Hidangan Utama)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_prasmanan_main">0</span>/<span class="pras-limit-val">5</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="prasmanan_main" value="Grilled Rib-Eye Steak"> Grilled
+                            Rib-Eye Steak</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Nasi Goreng Wagyu"> Nasi Goreng
+                            Wagyu</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Chicken Cordon Bleu"> Chicken Cordon
+                            Bleu</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Salmon Teriyaki"> Salmon
+                            Teriyaki</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Fettuccine Carbonara"> Fettuccine
+                            Carbonara</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Bebek Betutu"> Bebek Betutu</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Beef Bourguignon"> Beef
+                            Bourguignon</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Pad Thai"> Pad Thai</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Lamb Chops"> Lamb Chops</label>
+                        <label><input type="checkbox" name="prasmanan_main" value="Lasagna Alla Bolognese"> Lasagna Alla
+                            Bolognese</label>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="prasDessertCategory">
+                    <h3
+                        style="color: var(--primary); margin: 25px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+                        Dessert (Hidangan Penutup)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_prasmanan_dessert">0</span>/<span class="pras-limit-val">5</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Tiramisu"> Tiramisu</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Crème Brûlée"> Crème
+                            Brûlée</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Molten Chocolate Lava Cake">
+                            Molten Chocolate Lava Cake</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Mango Sticky Rice"> Mango Sticky
+                            Rice</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Es Cendol Durian"> Es Cendol
+                            Durian</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="New York Cheesecake"> New York
+                            Cheesecake</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Apple Pie"> Apple Pie</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Panna Cotta"> Panna Cotta</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Churros"> Churros</label>
+                        <label><input type="checkbox" name="prasmanan_dessert" value="Macarons"> Macarons</label>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="prasBevCategory">
+                    <h3
+                        style="color: var(--primary); margin: 25px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+                        Beverages (Minuman)</h3>
+                    <p class="limit-info" style="font-size: 0.8rem; margin-bottom: 5px;">Terpilih: <span
+                            id="count_prasmanan_beverages">0</span>/<span class="pras-limit-val">5</span></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Iced Peach Tea"> Iced Peach
+                            Tea</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Classic Mojito"> Classic
+                            Mojito</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Es Kopi Susu Gula Aren"> Es Kopi
+                            Susu Gula Aren</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Mango Smoothie"> Mango
+                            Smoothie</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Lemon Mint Squash"> Lemon Mint
+                            Squash</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Blue Lagoon Mocktail"> Blue
+                            Lagoon Mocktail</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Avocado Juice"> Avocado
+                            Juice</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Hot Matcha Latte"> Hot Matcha
+                            Latte</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Strawberry Milkshake">
+                            Strawberry Milkshake</label>
+                        <label><input type="checkbox" name="prasmanan_beverages" value="Thai Iced Tea"> Thai Iced
+                            Tea</label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block mt-3"
+                    onclick="proceedToReservation('prasmanan')"><i class="fa-solid fa-floppy-disk"></i> Simpan Menu &
+                    Lanjut ke Pemesanan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Menu Selection Modal -->
+    <div id="tumpengRodal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Pilihan Menu Tumpeng Royal</h2>
+                <p>Silakan pilih item menu yang Anda inginkan (Maksimal 7 item):</p>
+                <p id="selection-count" style="font-size: 0.9rem; color: var(--accent); margin-top: 5px;">0/7 item
+                    terpilih</p>
+            </div>
+            <form class="menu-selection-form">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="menu" value="Nasi Tumpeng" checked> Nasi Tumpeng</label>
+                    <label><input type="checkbox" name="menu" value="Telur"> Telur</label>
+                    <label><input type="checkbox" name="menu" value="Ayam Balado"> Ayam Balado</label>
+                    <label><input type="checkbox" name="menu" value="Ayam Goreng Lengkuas"> Ayam Goreng Lengkuas</label>
+                    <label><input type="checkbox" name="menu" value="Kering Tempe"> Kering Tempe</label>
+                    <label><input type="checkbox" name="menu" value="Mie Goreng Jawa"> Mie Goreng Jawa</label>
+                    <label><input type="checkbox" name="menu" value="Sambel Kentang Ati Ampela"> Sambel Kentang Ati
+                        Ampela</label>
+                    <label><input type="checkbox" name="menu" value="Sate Rembige"> Sate Rembige</label>
+                    <label><input type="checkbox" name="menu" value="Sambel Teri Pete"> Sambel Teri Pete</label>
+                    <label><input type="checkbox" name="menu" value="Perkedel"> Perkedel</label>
+                    <label><input type="checkbox" name="menu" value="Urap Sayur"> Urap Sayur</label>
+                    <label><input type="checkbox" name="menu" value="Sambal Hijau"> Sambal Hijau</label>
+                    <label><input type="checkbox" name="menu" value="Sambal Bawang"> Sambal Bawang</label>
+                    <label><input type="checkbox" name="menu" value="Sambal Balado"> Sambal Balado</label>
+                </div>
+                <button type="button" class="btn btn-primary btn-block mt-3"
+                    onclick="proceedToReservation('tumpeng')">Lanjut ke
+                    Pemesanan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reservation Modal -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('reservationModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Detail Pemesanan</h2>
+                <p>Lengkapi data diri Anda untuk pemesanan Nasi Tumpeng Royal</p>
+            </div>
+            <form id="reservationForm" onsubmit="handleReservation(event)">
+                <div class="form-group">
+                    <label>Menu Terpilih:</label>
+                    <div id="selected-menu-list" class="selected-items-box"></div>
+                </div>
+                <div class="form-group">
+                    <label for="resName">Nama Pemesan</label>
+                    <input type="text" id="resName" required class="form-control">
+                </div>
+                <div class="form-group" id="paxInputGroup">
+                    <label for="resPax">Jumlah (Pax/Porsi)</label>
+                    <input type="number" id="resPax" class="form-control" min="1" value="1"
+                        onchange="updateTotalPrice()">
+                </div>
+                <div class="form-group">
+                    <label for="resAddress">Alamat Pengantaran</label>
+                    <textarea id="resAddress" required class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resDate">Tanggal Acara</label>
+                    <input type="date" id="resDate" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Total Harga</label>
+                    <input type="text" value="Rp 0" readonly class="form-control price-input">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Selesaikan Pesanan & Lihat Detail
+                    Pembayaran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div id="receiptModal" class="modal">
+        <div class="modal-content receipt-content">
+            <span class="close-modal" onclick="closeModal('receiptModal')">&times;</span>
+            <div class="receipt-header text-center">
+                <h2>DapurTE Catering</h2>
+                <p>E-Receipt Pemesanan</p>
+                <!-- Status Badge -->
+                <div id="paymentStatus" style="margin: 10px 0;">
+                    <span class="badge-pending"
+                        style="background: #ffc107; color: #000; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">MENUNGGU
+                        PEMBAYARAN</span>
+                </div>
+                <hr>
+            </div>
+            <div class="receipt-body">
+                <p><strong>Nama:</strong> <span id="recName"></span></p>
+                <p><strong>Tanggal:</strong> <span id="recDate"></span></p>
+                <p><strong>Waktu Cetak:</strong> <span id="recTime"></span></p>
+                <p><strong>Alamat:</strong> <span id="recAddress"></span></p>
+                <hr>
+                <p><strong>Menu:</strong> <span id="recMenuType"></span></p>
+                <p><strong><span id="recListHeader">Rincian Pesanan</span>:</strong></p>
+                <ul id="recItems" class="receipt-items"></ul>
+                <hr>
+                <div class="receipt-total"
+                    style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <h3 style="margin: 0; color: var(--primary);">Total Bayar: <span id="recFinalTotal">Rp 0</span></h3>
+                </div>
+
+                <!-- Payment Section (Hidden after payment) -->
+                <div id="paymentSection">
+                    <div class="payment-info mt-3">
+                        <p class="text-center" style="font-weight: 600; color: var(--primary);">Metode Pembayaran:
+                            Transfer DANA</p>
+                        <div class="text-center mb-2">
+                            <span style="color: #666; font-size: 0.8rem;">Sisa Waktu Pembayaran: <span id="paymentTimer"
+                                    style="font-weight: bold; color: red;">05:00</span></span>
+                        </div>
+                        <div class="dana-box text-center"
+                            style="background: #f0f7ff; border: 2px dashed #108ee9; padding: 15px; border-radius: 12px; position: relative;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA"
+                                style="height: 25px; margin: 0 auto 10px;">
+                            <p style="font-size: 1.2rem; color: #108ee9; margin-bottom: 5px;">
+                                <strong id="danaNumber">0819 3631 8696</strong>
+                                <button onclick="copyToClipboard('081936318696')"
+                                    style="background: none; border: none; color: #108ee9; cursor: pointer; margin-left: 5px;"
+                                    title="Salin Nomor">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </p>
+                            <p style="font-size: 0.9rem;">(a.n Owner DapurTE)</p>
+                            <span id="copyToast"
+                                style="display: none; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem;">Tersalin!</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="paymentProof" style="font-weight: bold; display: block; margin-bottom: 5px;">Upload
+                            Bukti Pembayaran:</label>
+                        <input type="file" id="paymentProof" accept="image/*" class="form-control" style="padding: 5px;"
+                            onchange="previewProof(this)">
+                        <div id="proofPreview" style="margin-top: 10px; display: none;">
+                            <img src="" alt="Preview Bukti"
+                                style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+                        </div>
+                        <small class="text-muted">Format: JPG, PNG, PDF</small>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-3" onclick="confirmPayment()">Konfirmasi
+                        Pembayaran</button>
+                </div>
+
+                <!-- Success Message (Shown after payment) -->
+                <div id="successMessage"
+                    style="display: none; text-align: center; margin: 20px 0; padding: 20px; background: #e9f7ef; border-radius: 12px;">
+                    <i class="fa-solid fa-circle-check"
+                        style="font-size: 4rem; color: #28a745; margin-bottom: 15px;"></i>
+                    <h3 style="color: #28a745; margin-bottom: 5px;">Pembayaran Terverifikasi!</h3>
+                    <p style="color: #155724;">Terima kasih, pesanan Anda sedang kami proses.</p>
+                </div>
+
+            </div>
+            <button id="btnPrint" class="btn btn-secondary btn-block mt-3" onclick="window.print()"
+                style="display: none;">Cetak Resi Lunas</button>
+            <button id="btnCloseReceipt" class="btn btn-outline btn-block mt-2"
+                onclick="closeModal('receiptModal')">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div id="consultModal" class="modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <span class="close-modal" onclick="closeModal('consultModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Konsultasi Gratis</h2>
+                <p>Silakan isi data Anda untuk menjadwalkan konsultasi katering.</p>
+            </div>
+            <form id="consultForm" onsubmit="sendConsultation(event)">
+                <div class="form-group">
+                    <label for="conName">Nama Lengkap</label>
+                    <input type="text" id="conName" required class="form-control" placeholder="Nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="conDate">Rencana Tanggal Acara</label>
+                    <input type="date" id="conDate" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="conTime">Rencana Jam Acara / Konsultasi</label>
+                    <input type="time" id="conTime" required class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Kirim ke WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
